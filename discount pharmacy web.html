@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Pharmacy | Medical Store Varanasi</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f9f7;
+            color: #222;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #087f5b, #00a878);
+            color: white;
+            padding: 15px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #ffe066;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffe066;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 550px;
+            padding: 80px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(120deg, #e7fff5, #ffffff);
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            color: #087f5b;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .discount {
+            color: #d62828;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 8px 5px 0 0;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #087f5b;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #055c42;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1da851;
+        }
+
+        .medical-icon {
+            font-size: 180px;
+            color: #087f5b;
+            text-align: center;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 70px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: #087f5b;
+            margin-bottom: 40px;
+        }
+
+        /* SERVICES */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #087f5b;
+            margin-bottom: 10px;
+        }
+
+        /* PRODUCTS */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .product-image {
+            height: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 70px;
+            background: #eefbf6;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .product h3 {
+            margin-bottom: 8px;
+        }
+
+        .price {
+            color: #087f5b;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .order-btn {
+            margin-top: 12px;
+            display: inline-block;
+            padding: 10px 18px;
+            background: #25D366;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* OFFER */
+        .offer {
+            background: linear-gradient(135deg, #d62828, #ef476f);
+            color: white;
+            text-align: center;
+            border-radius: 20px;
+            padding: 50px 20px;
+        }
+
+        .offer h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .offer p {
+            font-size: 20px;
+        }
+
+        /* ABOUT */
+        .about {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text p {
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .about-box {
+            flex: 1;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .about-box h3 {
+            color: #087f5b;
+            margin-bottom: 15px;
+        }
+
+        .about-box p {
+            margin: 10px 0;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #e7fff5;
+        }
+
+        .contact-box {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-box p {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #075c43;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        footer p {
+            margin: 8px;
+        }
+
+        /* FLOATING WHATSAPP */
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 999;
+        }
+
+        /* MOBILE */
+        @media(max-width: 900px) {
+
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 6px;
+                font-size: 14px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 50px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .medical-icon {
+                font-size: 120px;
+                margin-top: 30px;
+            }
+
+            .cards,
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about {
+                flex-direction: column;
+            }
+        }
+
+        @media(max-width: 550px) {
+
+            .cards,
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <div class="logo">
+        💊 Discount <span>Pharmacy</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-text">
+
+        <h1>Discount Pharmacy</h1>
+
+        <h2>Your Trusted Medical Store in Varanasi</h2>
+
+        <p>
+            Allopathic & Ayurvedic Medicines, Surgical Items,
+            Baby Food, Cosmetics, Health Products and much more.
+        </p>
+
+        <div class="discount">
+            🔥 Get 15% – 20% Discount on Medicines
+        </div>
+
+        <p>
+            🚚 Free Home Delivery Available
+        </p>
+
+        <a href="#products" class="btn btn-primary">
+            🛒 Shop Now
+        </a>
+
+        <a href="https://wa.me/919026917570?text=Hello%20Discount%20Pharmacy%2C%20I%20want%20to%20order%20medicine."
+           class="btn btn-whatsapp">
+            💬 Order on WhatsApp
+        </a>
+
+    </div>
+
+    <div class="medical-icon">
+        ⚕️
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-icon">💊</div>
+            <h3>Medicines</h3>
+            <p>Allopathic and Ayurvedic medicines.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🚚</div>
+            <h3>Home Delivery</h3>
+            <p>Fast home delivery in nearby areas.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🩺</div>
+            <h3>Health Check</h3>
+            <p>BP and Sugar testing facility.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🩹</div>
+            <h3>Surgical Items</h3>
+            <p>Quality surgical and healthcare products.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OFFER -->
+<section>
+
+    <div class="offer">
+
+        <h2>🔥 SPECIAL OFFER 🔥</h2>
+
+        <p>
+            Get up to <strong>20% OFF</strong> on selected medicines
+        </p>
+
+        <p>
+            🚚 Free Home Delivery Available
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+<section id="products">
+
+    <h2 class="section-title">Popular Categories</h2>
+
+    <div class="products">
+
+        <div class="product">
+
+            <div class="product-image">💊</div>
+
+            <h3>Allopathic Medicine</h3>
+
+            <p>Quality medicines at discounted prices.</p>
+
+            <a class="order-btn"
+               href="https://wa.me/917007951382?text=I%20want%20to%20order%20Allopathic%20Medicine">
+                Order Now
+            </a>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-image">🌿</div>
+
+            <h3>Ayurvedic Medicine</h3>
+
+            <p>Ayurvedic healthcare products.</p>
+
+            <a class="order-btn"
+               href="https://wa.me/917007951382?text=I%20want%20to%20order%20Ayurvedic%20Medicine">
+                Order Now
+            </a>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-image">👶</div>
+
+            <h3>Baby Food</h3>
+
+            <p>Baby nutrition and care products.</p>
+
+            <a class="order-btn"
+               href="https://wa.me/917007951382?text=I%20want%20to%20order%20Baby%20Food">
+                Order Now
+            </a>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-image">💪</div>
+
+            <h3>Protein & Health</h3>
+
+            <p>Nutrition and health products.</p>
+
+            <a class="order-btn"
+               href="https://wa.me/917007951382?text=I%20want%20to%20order%20Protein%20and%20Health%20Products">
+                Order Now
+            </a>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-image">🧴</div>
+
+            <h3>Cosmetics</h3>
+
+            <p>Personal care and cosmetic products.</p>
+
+            <a class="order-btn"
+               href="https://wa.me/917007951382?text=I%20want%20to%20order%20Cosmetics">
+                Order Now
+            </a>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-image">🩹</div>
+
+            <h3>Surgical Items</h3>
+
+            <p>Healthcare and surgical products.</p>
+
+            <a class="order-btn"
+               href="https://wa.me/9170079513812?text=I%20want%20to%20order%20Surgical%20Items">
+                Order Now
+            </a>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-image">🩺</div>
+
+            <h3>Health Tests</h3>
+
+            <p>BP and blood sugar testing.</p>
+
+            <a class="order-btn"
+               href="https://wa.me/917007951382?text=I%20want%20to%20know%20about%20Health%20Tests">
+                Enquire
+            </a>
+
+        </div>
+
+
+        <div class="product">
+
+            <div class="product-image">❤️</div>
+
+            <h3>Healthcare Products</h3>
+
+            <p>Daily health and wellness products.</p>
+
+            <a class="order-btn"
+               href="https://wa.me/917007951382?text=I%20want%20to%20order%20Healthcare%20Products">
+                Order Now
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+    <h2 class="section-title">About Discount Pharmacy</h2>
+
+    <div class="about">
+
+        <div class="about-text">
+
+            <p>
+                <strong>Discount Pharmacy</strong> is your trusted
+                neighbourhood medical store in Varanasi.
+            </p>
+
+            <br>
+
+            <p>
+                We provide quality medicines, healthcare products,
+                surgical items, baby products, cosmetics and
+                Ayurvedic medicines at competitive prices.
+            </p>
+
+            <br>
+
+            <p>
+                Our goal is simple:
+                <strong>Quality Healthcare at Affordable Prices.</strong>
+            </p>
+
+        </div>
+
+
+        <div class="about-box">
+
+            <h3>🏥 Why Choose Us?</h3>
+
+            <p>✅ Genuine Medicines</p>
+            <p>✅ 15%–20% Discount</p>
+            <p>✅ Free Home Delivery</p>
+            <p>✅ Friendly Service</p>
+            <p>✅ BP & Sugar Testing</p>
+            <p>✅ Wide Range of Products</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact-box">
+
+        <p>
+            📍 <strong>Address:</strong><br>
+            Jai Prakash Nagar, Madhopur, Sigra, Varanasi, Uttar Pradesh
+        </p>
+
+        <p>
+            📞 <strong>Phone:</strong>
+            <a href="tel:+91707951382">7007951382</a>
+        </p>
+
+        <p>
+            🕘 <strong>Opening Hours:</strong><br>
+            9:00 AM – 10:30 PM
+        </p>
+
+        <a class="btn btn-primary"
+           href="tel:+917007951382">
+            📞 Call Now
+        </a>
+
+        <a class="btn btn-whatsapp"
+           href="https://wa.me/917007951382">
+            💬 WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <h2>💊 Discount Pharmacy</h2>
+
+    <p>Apka Swasthya Hamari Prathmikta</p>
+
+    <p>
+        © 2026 Discount Pharmacy. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+<a class="whatsapp"
+   href="https://wa.me/917007951382?text=Hello%20Discount%20Pharmacy%2C%20I%20want%20to%20order%20medicine."
+   target="_blank">
+    💬
+</a>
+
+</body>
+</html>
